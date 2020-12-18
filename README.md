@@ -135,6 +135,7 @@ For Android, this plugin currently supports
 2. Adding phone number and email address
 3. Toggling between Dark and Light mode
 
+![settings](https://github.com/VictoriaAutMors/Map/images/settings.jpg)
 
 ### Basic Usage: <a name="basic"></a>
 ```
@@ -162,6 +163,8 @@ SettingsList(
 ```
 
 ### Settings UI supports dark mode (in progress) <a name="dark"></a>
+
+![dark mode](https://github.com/VictoriaAutMors/Map/images/darkmode.jpg)
 
 #### Example <a name="darkexample"></a>
 ```
@@ -214,6 +217,8 @@ Map tiles are typically 256×256 pixel images.
 Tiles are not always in these dimensions; for example there could be 64×64 pixel images for mobile use, however 256×256 pixel images are a de facto standard. 512×512 pixel seems to be the usual size of high-resolution tiles.
 
 A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
+
+![map](https://github.com/VictoriaAutMors/Map/images/map.jpg)
 
 ## Plugins <a name="plugins"></a>
 
