@@ -14,6 +14,7 @@ This repository provides an example app for Android devices called Map App that 
 * [Requirements](#req)
 * [Usage](#usage)
 * [Run the example](#run)
+* [Menu](#menu)
 * [Map tiles](#maptiles)
 * [Settings UI](#settingsui)
   * [Basic usage](#basic)
@@ -128,6 +129,28 @@ See the `flutter_map_example/` folder for a working example.
 
 Note that there is also `FileTileProvider()`, which you can use to load tiles from the filesystem.
 
+## Menu <a name="menu"></a>
+The menu consists of three components:
+1. Map
+2. Attendings (in progress)
+3. Settings
+
+![menu](images/menu.jpg)
+
+## Map tiles <a name="maptiles"></a>
+
+In OSM the term is much more likely to refer to 'map tiles':
+- square bitmap graphics displayed in a grid arrangement to show a map
+- We may also be talking about tiled map data.
+
+Map tiles are typically 256×256 pixel images. 
+
+Tiles are not always in these dimensions; for example there could be 64×64 pixel images for mobile use, however 256×256 pixel images are a de facto standard. 512×512 pixel seems to be the usual size of high-resolution tiles.
+
+A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
+
+![map](images/map.jpg)
+
 ## Settings UI <a name="settingsui"></a>
 
 For Android, this plugin currently supports 
@@ -162,23 +185,7 @@ SettingsList(
       )
 ```
 
-## Map tiles <a name="maptiles"></a>
-
-In OSM the term is much more likely to refer to 'map tiles':
-- square bitmap graphics displayed in a grid arrangement to show a map
-- We may also be talking about tiled map data.
-
-Map tiles are typically 256×256 pixel images. 
-
-Tiles are not always in these dimensions; for example there could be 64×64 pixel images for mobile use, however 256×256 pixel images are a de facto standard. 512×512 pixel seems to be the usual size of high-resolution tiles.
-
-A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
-
-![map](map.jpg)
-
 ### Settings UI supports dark mode (in progress) <a name="dark"></a>
-
-![dark mode](images/darkmode.jpg)
 
 #### Example <a name="darkexample"></a>
 ```
