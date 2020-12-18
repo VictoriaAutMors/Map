@@ -1,5 +1,6 @@
 # Map Adviser
 A Dart implementation of map adviser written in Flutter. 
+This repository provides an example app for Android devices called Map App that can be used as a starter for your organization's mapping app which was implemented in Flutter. You can use the Map App as is, or extend it.
 
 ### Android
 
@@ -165,21 +166,18 @@ A plugin to show customisable popups for markers.
 A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
 ### Installing: 
+In your pubspec.yaml
 
 ```
-gitclone https://github.com/VictoriaAutMors/Map 
-```
-To run it, in a terminal cd into the folder. Then execute ulimit -S -n 2048 (ref). Then execute flutter run with a running emulator.
-
-
-### Dependencies:
-#### Add settings_ui:
-
-```yaml
 dependencies:
   settings_ui: ^0.5.0
 ```
-#### Add fleaflet flutter_map:
+
+```
+import 'package:settings_ui/settings_ui.dart';
+```
+
+#### Add flutter_map to your pubspec:
 
 ```yaml
 dependencies:
