@@ -2,9 +2,19 @@
 A Dart implementation of map adviser written in Flutter. 
 This repository provides an example app for Android devices called Map App that can be used as a starter for your organization's mapping app which was implemented in Flutter. You can use the Map App as is, or extend it.
 
+# Content
+* [Features](#features)
+* 
+* 
+* 
+* 
+
+## Features <a name="features"></a>
+
 ### Android
 
-Ensure the following permission is present in your Android Manifest file, located in `<project root>/android/app/src/main/AndroidManifest.xml`:
+Ensure the following permission is present in your Android Manifest file, located in 
+`<project root>/android/app/src/main/AndroidManifest.xml`:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -173,9 +183,13 @@ dependencies:
   settings_ui: ^0.5.0
 ```
 
+```
+import 'package:settings_ui/settings_ui.dart';
+```
+
 #### Add flutter_map to your pubspec:
 
 ```yaml
 dependencies:
-  flutter_map: 
+  flutter_map: any # or the latest version on Pub
 ```
