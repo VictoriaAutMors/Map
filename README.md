@@ -1,5 +1,4 @@
-[![BuildStatus](https://travis-ci.com/fleaflet/flutter_map.svg?branch=master)](https://travis-ci.org/johnpryan/flutter_map)
-[![Pub](https://img.shields.io/pub/v/flutter_map.svg)](https://pub.dev/packages/flutter_map)
+
 
 # flutter_map
 
@@ -276,10 +275,3 @@ Note that there is also `FileTileProvider()`, which you can use to load tiles fr
 - [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): A plugin to show customisable popups for markers.
 - [map_elevation](https://github.com/OwnWeb/map_elevation): A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
-## Roadmap
-
-For the latest roadmap, please see the [Issue Tracker]
-
-[Leaflet]: http://leafletjs.com/
-[Mapbox]: https://www.mapbox.com/
-[Issue Tracker]: https://github.com/johnpryan/flutter_map/issues
