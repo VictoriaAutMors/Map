@@ -173,13 +173,9 @@ dependencies:
   settings_ui: ^0.5.0
 ```
 
-```
-import 'package:settings_ui/settings_ui.dart';
-```
-
 #### Add flutter_map to your pubspec:
 
 ```yaml
 dependencies:
-  flutter_map: any # or the latest version on Pub
+  flutter_map: 
 ```
