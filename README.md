@@ -9,9 +9,24 @@ This repository provides an example app for Android devices called Map App that 
   * [Android](#android)
   * [Fork the repository](#fork)
   * [Clone the repositiry](#clone)
-   * [Command line Git](#gitcl)
-*
-* 
+    * [Command line Git](#gitcl)
+  * [Configuring a Remote for a Fork](#remote)
+* [Requirements](#req)
+* [Usage](#usage)
+* [Run the example](#run)
+* [Settings UI](#settingsui)
+  * [Basic usage](#basic)
+  * [Dark mode](#dark)
+    * [Example](#darkexample)
+* [Map tiles](#maptiles)
+* [Plugins](#plugins)
+  * [flutter_map_marker_cluster](#p1)
+  * [user_location](#p2)
+  * [flutter_map_tappable_polyline](#p3)
+  * [lat_lon_grid_plugin](#p4)
+  * [flutter_map_marker_popup](#p5)
+  * [map_elevation](#p6)
+* [Dependencies](#dep)
 
 ## Features <a name="features"></a>
 
@@ -40,10 +55,24 @@ Once you have forked the repo, you can make a clone
 2. `cd` into the `Map` folder
 3. Make your changes and create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
+### Configuring a Remote for a Fork <a name="remote"></a>
 
+If you make changes in the fork and would like to [sync](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) those changes with the upstream repository, you must first [configure the remote](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork). This will be required when you have created local branches and would like to make a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to your upstream branch.
 
+1. In the Terminal (for Mac users) or command prompt (for Windows and Linux users) type `git remote -v` to list the current configured remote repo for your fork.
+2. `git remote add upstream https://github.com/VictoriaAutMors/Map.git` to specify new remote upstream repository that will be synced with the fork. You can type `git remote -v` to verify the new upstream.
 
-## Usage
+If there are changes made in the Original repository, you can sync the fork to keep it updated with upstream repository.
+
+1. In the terminal, change the current working directory to your local project
+2. Type `git fetch upstream` to fetch the commits from the upstream repository
+3. `git checkout master` to checkout your fork's local master branch.
+4. `git merge upstream/master` to sync your local `master branch` with `upstream/master`. Note: Your local changes will be retained and your fork's master branch will be in sync with the upstream repository.
+
+## Requirements <a name="req"></a>
+* [Android Studio](https://developer.android.com/studio)
+
+## Usage <a name="usage"></a>
 
 Configure the map using `MapOptions` and layer options:
 
@@ -87,7 +116,7 @@ MapOptions(
 ```
 
 
-## Run the example
+## Run the example <a name="run"></a>
 
 See the `example/` folder for a working example app.
 
@@ -100,9 +129,9 @@ See the `flutter_map_example/` folder for a working example.
 
 Note that there is also `FileTileProvider()`, which you can use to load tiles from the filesystem.
 
-## Settings UI
+## Settings UI <a name="settingsui"></a>
 
-### Basic Usage:
+### Basic Usage: <a name="basic"></a>
 ```
 SettingsList(
         sections: [
@@ -127,9 +156,9 @@ SettingsList(
       )
 ```
 
-### Settings UI supports dark mode (in progress)
+### Settings UI supports dark mode (in progress) <a name="dark"></a>
 
-### Example 
+#### Example <a name="darkexample"></a>
 ```
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
@@ -169,7 +198,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## Map tiles
+## Map tiles <a name="maptiles"></a>
 
 In OSM the term is much more likely to refer to 'map tiles':
 - square bitmap graphics displayed in a grid arrangement to show a map
@@ -181,29 +210,22 @@ Tiles are not always in these dimensions; for example there could be 64×64 pixe
 
 A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
 
+## Plugins <a name="plugins"></a>
 
-
-## Plugins
-
-#### [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): 
-Provides Beautiful Animated Marker Clustering functionality
-#### [user_location](https://github.com/igaurab/user_location_plugin): 
+#### [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): <a name="p1"></a>
+Provides Beautiful Animated Marker Clustering functionality 
+#### [user_location](https://github.com/igaurab/user_location_plugin): <a name="p2"></a>
 A plugin to handle and plot the current user location in FlutterMap
-#### [flutter_map_tappable_polyline](https://github.com/OwnWeb/flutter_map_tappable_polyline): 
+#### [flutter_map_tappable_polyline](https://github.com/OwnWeb/flutter_map_tappable_polyline):  <a name="p3"></a>
 A plugin to add `onTap` callback to `Polyline`
-#### [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): 
+#### [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): <a name="p4"></a>
 Adds a latitude / longitude grid as plugin to the FlutterMap
-#### [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): 
+#### [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): <a name="p5"></a>
 A plugin to show customisable popups for markers.
-#### [map_elevation](https://github.com/OwnWeb/map_elevation): 
+#### [map_elevation](https://github.com/OwnWeb/map_elevation): <a name="p6"></a>
 A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
-### Installing: 
-```
-gitclone https://github.com/VictoriaAutMors/Map
-```
-To run it, in a terminal cd into the folder. Then execute flutter run with a running emulator.
-### Dependencies:
+## Dependencies: <a name="dep"></a>
 
 ```yaml
 dependencies:
