@@ -176,20 +176,27 @@ A plugin to show customisable popups for markers.
 A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
 ### Installing: 
-In your pubspec.yaml
-
 ```
-dependencies:
-  settings_ui: ^0.5.0
+gitclone https://github.com/VictoriaAutMors/Map
 ```
-
-```
-import 'package:settings_ui/settings_ui.dart';
-```
-
-#### Add flutter_map to your pubspec:
+To run it, in a terminal cd into the folder. Then execute flutter run with a running emulator.
+### Dependencies:
 
 ```yaml
 dependencies:
   flutter_map: any # or the latest version on Pub
+  tuple: ^1.0.2
+  device_preview: ^0.5.5
+  font_awesome_flutter: ^8.10.1
+  latlong: ^0.6.1
+  positioned_tap_detector: ^1.0.2
+  transparent_image: ^1.0.0
+  async: ^2.1.0
+  flutter_image: ^3.0.0
+  cached_network_image: ^2.0.0
+  path_provider: ^1.6.7
+  vector_math: ^2.0.0
+  proj4dart: ^1.0.4
+  meta: ^1.1.0
 ```
+  
