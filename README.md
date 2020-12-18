@@ -9,7 +9,8 @@ This repository provides an example app for Android devices called Map App that 
   * [Android](#android)
   * [Fork the repository](#fork)
   * [Clone the repositiry](#clone)
-* 
+   * [Command line Git](#gitcl)
+*
 * 
 
 ## Features <a name="features"></a>
@@ -34,7 +35,7 @@ Fork the [Map App](https://github.com/VictoriaAutMors/Map/fork) repository
 ### Clone the repository <a name="clone"></a>
 Once you have forked the repo, you can make a clone
 
-#### Command line Git
+#### Command line Git <a name="gitcl"></a>
 1. Clone the Map repo
 2. `cd` into the `Map` folder
 3. Make your changes and create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
