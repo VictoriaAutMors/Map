@@ -184,7 +184,7 @@ To run it, in a terminal cd into the folder. Then execute flutter run with a run
 
 ```yaml
 dependencies:
-  flutter_map: any # or the latest version on Pub
+  flutter_map: ^0.10.1+1
   tuple: ^1.0.2
   device_preview: ^0.5.5
   font_awesome_flutter: ^8.10.1
