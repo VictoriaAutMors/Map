@@ -156,8 +156,7 @@ class MyApp extends StatelessWidget {
 ```
 
 ## Map tiles
-
-
+[Follow this guide to grab offline tiles](https://tilemill-project.github.io/tilemill/docs/guides/osm-bright-mac-quickstart/)
 
 ## Plugins
 
