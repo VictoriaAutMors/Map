@@ -156,14 +156,32 @@ class MyApp extends StatelessWidget {
 ```
 
 ## Map tiles
+
+In OSM the term is much more likely to refer to 'map tiles':
+- square bitmap graphics displayed in a grid arrangement to show a map
+- We may also be talking about tiled map data.
+
+Map tiles are typically 256×256 pixel images. 
+
+Tiles are not always in these dimensions; for example there could be 64×64 pixel images for mobile use, however 256×256 pixel images are a de facto standard. 512×512 pixel seems to be the usual size of high-resolution tiles.
+
+A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
+
 [Follow this guide to grab offline tiles](https://tilemill-project.github.io/tilemill/docs/guides/osm-bright-mac-quickstart/)
+
 
 ## Plugins
 
-- [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): Provides Beautiful Animated Marker Clustering functionality
-- [user_location](https://github.com/igaurab/user_location_plugin): A plugin to handle and plot the current user location in FlutterMap
-- [flutter_map_tappable_polyline](https://github.com/OwnWeb/flutter_map_tappable_polyline): A plugin to add `onTap` callback to `Polyline`
-- [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): Adds a latitude / longitude grid as plugin to the FlutterMap
-- [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): A plugin to show customisable popups for markers.
-- [map_elevation](https://github.com/OwnWeb/map_elevation): A widget to display elevation of a track (polyline) like Leaflet.Elevation
+#### [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): 
+Provides Beautiful Animated Marker Clustering functionality
+#### [user_location](https://github.com/igaurab/user_location_plugin): 
+A plugin to handle and plot the current user location in FlutterMap
+#### [flutter_map_tappable_polyline](https://github.com/OwnWeb/flutter_map_tappable_polyline): 
+A plugin to add `onTap` callback to `Polyline`
+#### [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): 
+Adds a latitude / longitude grid as plugin to the FlutterMap
+#### [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): 
+A plugin to show customisable popups for markers.
+#### [map_elevation](https://github.com/OwnWeb/map_elevation): 
+A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
