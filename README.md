@@ -115,7 +115,6 @@ MapOptions(
 ),
 ```
 
-
 ## Run the example <a name="run"></a>
 
 See the `example/` folder for a working example app.
@@ -130,6 +129,12 @@ See the `flutter_map_example/` folder for a working example.
 Note that there is also `FileTileProvider()`, which you can use to load tiles from the filesystem.
 
 ## Settings UI <a name="settingsui"></a>
+
+For Android, this plugin currently supports 
+1. Changing language
+2. Adding phone number and email address
+3. Toggling between Dark and Light mode
+
 
 ### Basic Usage: <a name="basic"></a>
 ```
