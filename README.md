@@ -168,9 +168,9 @@ A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
 ```
 gitclone https://github.com/VictoriaAutMors/Map 
-
-To run it, in a terminal cd into the folder. Then execute ulimit -S -n 2048 (ref). Then execute flutter run with a running emulator.
 ```
+To run it, in a terminal cd into the folder. Then execute ulimit -S -n 2048 (ref). Then execute flutter run with a running emulator.
+
 
 ### Dependencies:
 #### Add settings_ui:
