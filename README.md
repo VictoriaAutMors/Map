@@ -4,7 +4,6 @@ A Dart implementation of map adviser written in Flutter.
 This repository provides an example app for Android devices called Map App that can be used as a starter for your organization's mapping app which was implemented in Flutter. You can use the Map App as is, or extend it.
 
 # Content
-* [Features](#features)
 * [Development instructions](#devinst)
   * [Android](#android)
   * [Fork the repository](#fork)
@@ -28,9 +27,6 @@ This repository provides an example app for Android devices called Map App that 
   * [flutter_map_marker_popup](#p5)
   * [map_elevation](#p6)
 * [Dependencies](#dep)
-
-## Features <a name="features"></a>
-
 
 ## Development instruction <a name="devinst"></a>
 
