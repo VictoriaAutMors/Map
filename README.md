@@ -1,14 +1,6 @@
 # Map Adviser
 A Dart implementation of map adviser written in Flutter. 
 
-## Installation
-Add flutter_map to your pubspec:
-
-```yaml
-dependencies:
-  flutter_map: any # or the latest version on Pub
-```
-
 ### Android
 
 Ensure the following permission is present in your Android Manifest file, located in `<project root>/android/app/src/main/AndroidManifest.xml`:
@@ -75,18 +67,6 @@ See the `flutter_map_example/` folder for a working example.
 Note that there is also `FileTileProvider()`, which you can use to load tiles from the filesystem.
 
 ## Settings UI
-
-### Installing: 
-In your pubspec.yaml
-
-```
-dependencies:
-  settings_ui: ^0.5.0
-```
-
-```
-import 'package:settings_ui/settings_ui.dart';
-```
 
 ### Basic Usage:
 ```
@@ -167,7 +147,6 @@ Tiles are not always in these dimensions; for example there could be 64×64 pixe
 
 A "tileset" typically includes enough tiles to form a very large image, if they were shown all at once, and also several zoom levels. Generally the idea is not to show them all at once, but to display a particular area of the map on a website. 
 
-[Follow this guide to grab offline tiles](https://tilemill-project.github.io/tilemill/docs/guides/osm-bright-mac-quickstart/)
 
 
 ## Plugins
@@ -185,3 +164,21 @@ A plugin to show customisable popups for markers.
 #### [map_elevation](https://github.com/OwnWeb/map_elevation): 
 A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
+### Installing: 
+In your pubspec.yaml
+
+```
+dependencies:
+  settings_ui: ^0.5.0
+```
+
+```
+import 'package:settings_ui/settings_ui.dart';
+```
+
+#### Add flutter_map to your pubspec:
+
+```yaml
+dependencies:
+  flutter_map: any # or the latest version on Pub
+```
