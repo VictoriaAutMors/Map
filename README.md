@@ -1,24 +1,46 @@
 # Map Adviser
-A Dart implementation of map adviser written in Flutter. 
+A Dart implementation of map adviser written in Flutter.
+
 This repository provides an example app for Android devices called Map App that can be used as a starter for your organization's mapping app which was implemented in Flutter. You can use the Map App as is, or extend it.
 
 # Content
 * [Features](#features)
-* 
-* 
+* [Development instructions](#devinst)
+  * [Android](#android)
+  * [Fork the repository](#fork)
+  * [Clone the repositiry](#clone)
 * 
 * 
 
 ## Features <a name="features"></a>
 
-### Android
 
-Ensure the following permission is present in your Android Manifest file, located in 
-`<project root>/android/app/src/main/AndroidManifest.xml`:
+## Development instruction <a name="devinst"></a>
 
-```xml
+This Maps App repo is an Android Studio Project and App Module that can be directly cloned and imported into Android Studio. In addition, you'll need to follow the steps below to obtain your client id and redirect uri. Both are required for leveraging all the features of the app.
+
+### Android <a name="android"></a>
+
+Ensure the following permission is present in your Android Manifest file, located in `<project root>/android/app/src/main/AndroidManifest.xml`:
+
+```
+xml
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
+### Fork the repository <a name="fork"></a>
+
+Fork the [Map App](https://github.com/VictoriaAutMors/Map/fork) repository
+
+### Clone the repository <a name="clone"></a>
+Once you have forked the repo, you can make a clone
+
+#### Command line Git
+1. Clone the Map repo
+2. `cd` into the `Map` folder
+3. Make your changes and create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+
+
+
 
 ## Usage
 
