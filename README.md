@@ -1,11 +1,7 @@
-
-
-# flutter_map
-
-A Dart implementation of map adviser written in Flutter.
+# Map Adviser
+A Dart implementation of map adviser written in Flutter. 
 
 ## Installation
-
 Add flutter_map to your pubspec:
 
 ```yaml
@@ -86,4 +82,86 @@ Note that there is also `FileTileProvider()`, which you can use to load tiles fr
 - [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): Adds a latitude / longitude grid as plugin to the FlutterMap
 - [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): A plugin to show customisable popups for markers.
 - [map_elevation](https://github.com/OwnWeb/map_elevation): A widget to display elevation of a track (polyline) like Leaflet.Elevation
+
+
+## Settings UI
+
+### Installing: 
+In your pubspec.yaml
+
+```
+dependencies:
+  settings_ui: ^0.5.0
+```
+
+```
+import 'package:settings_ui/settings_ui.dart';
+```
+
+### Basic Usage:
+```
+SettingsList(
+        sections: [
+          SettingsSection(
+            title: 'Section',
+            tiles: [
+              SettingsTile(
+                title: 'Language',
+                subtitle: 'English',
+                leading: Icon(Icons.language),
+                onPressed: (BuildContext context) {},
+              ),
+              SettingsTile.switchTile(
+                title: 'Use fingerprint',
+                leading: Icon(Icons.fingerprint),
+                switchValue: value,
+                onToggle: (bool value) {},
+              ),
+            ],
+          ),
+        ],
+      )
+```
+
+### Settings UI supports dark mode (in progress)
+
+### Example 
+```
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+import 'screens/settings_screen.dart';
+
+void main() {
+  runApp(
+    DevicePreview(
+      enabled: kIsWeb ? false : !kReleaseMode,
+      builder: (_) => MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      locale: DevicePreview.of(context).locale,
+      builder: DevicePreview.appBuilder,
+      debugShowCheckedModeBanner: false,
+      title: 'Settings UI Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepPurple,
+        brightness: Brightness.dark,
+      ),
+      home: SettingsScreen(),
+    );
+  }
+}
+```
 
