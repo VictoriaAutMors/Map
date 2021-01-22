@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:map/pages/settings_screen.dart';
 
 import './pages/home.dart';
 import './pages/widgets.dart';
-import './pages/settings.dart';
-
+import './pages/settings_screen.dart';
+import 'package:sqflite/sqflite.dart';
 
 void main() => runApp(MyApp());
 
+class Coordinates {
+  final int height;
+  final int width;
+  Coordinates({this.height, this.width});
+}
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Map Example',
-      theme: ThemeData(
-        primarySwatch: mapBoxBlue,
-          brightness: Brightness.light
-      ),
-      darkTheme: ThemeData(
-        primarySwatch: mapBoxBlue,
-        brightness: Brightness.dark
-      ),
+      theme: ThemeData(primarySwatch: mapBoxBlue, brightness: Brightness.light),
+      darkTheme:
+          ThemeData(primarySwatch: mapBoxBlue, brightness: Brightness.dark),
       home: HomePage(),
       routes: <String, WidgetBuilder>{
         WidgetsPage.route: (context) => WidgetsPage(),
-        Settings.route: (context) => Settings()
+        SettingsScreen.route: (context) => SettingsScreen(),
       },
     );
   }

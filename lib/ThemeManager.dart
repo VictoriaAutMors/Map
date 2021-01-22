@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../services/storage_manager.dart';
+import 'storage_manager.dart';
 
 class ThemeNotifier with ChangeNotifier {
   final darkTheme = ThemeData(
@@ -23,7 +23,6 @@ class ThemeNotifier with ChangeNotifier {
   );
 
   ThemeData _themeData;
-  ThemeData getTheme() =&gt; _themeData;
 
   ThemeNotifier() {
     StorageManager.readData('themeMode').then((value) {

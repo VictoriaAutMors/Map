@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:map/pages/settings_screen.dart';
 
 import '../pages/home.dart';
-import '../pages/settings.dart';
 
 Widget _buildMenuItem(
     BuildContext context, Widget title, String routeName, String currentRoute) {
@@ -35,11 +35,8 @@ Drawer buildDrawer(BuildContext context, String currentRoute) {
           HomePage.route,
           currentRoute,
         ),
-        _buildMenuItem(context,
-            const Text('Settings'),
-            Settings.route,
-            currentRoute)
-
+        _buildMenuItem(context, const Text('Settings'), SettingsScreen.route,
+            currentRoute),
       ],
     ),
   );

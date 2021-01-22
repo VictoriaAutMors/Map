@@ -4,50 +4,33 @@ import 'package:latlong/latlong.dart';
 
 import '../widgets/drawer.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const String route = '/';
+  @override
+  State<StatefulWidget> createState() {
+    return TapToAddPageState();
+  }
+}
+
+class TapToAddPageState extends State<HomePage> {
+  List<LatLng> tappedPoints = [];
 
   @override
   Widget build(BuildContext context) {
-    var markers = <Marker>[
-      Marker(
+    var markers = tappedPoints.map((latlng) {
+      return Marker(
         width: 80.0,
         height: 80.0,
-        point: LatLng(51.5, -0.09),
+        point: latlng,
         builder: (ctx) => Container(
-          child: FlutterLogo(
-            textColor: Colors.blue,
-            key: ObjectKey(Colors.blue),
-          ),
+          child: FlutterLogo(),
         ),
-      ),
-      Marker(
-        width: 80.0,
-        height: 80.0,
-        point: LatLng(53.3498, -6.2603),
-        builder: (ctx) => Container(
-          child: FlutterLogo(
-            textColor: Colors.green,
-            key: ObjectKey(Colors.green),
-          ),
-        ),
-      ),
-      Marker(
-        width: 80.0,
-        height: 80.0,
-        point: LatLng(48.8566, 2.3522),
-        builder: (ctx) => Container(
-          child: FlutterLogo(
-            textColor: Colors.purple,
-            key: ObjectKey(Colors.purple),
-          ),
-        ),
-      ),
-    ];
+      );
+    }).toList();
 
     return Scaffold(
       appBar: AppBar(title: Text('Home')),
-      drawer: buildDrawer(context, route),
+      drawer: buildDrawer(context, HomePage.route),
       body: Padding(
         padding: EdgeInsets.all(8.0),
         child: Column(
@@ -59,17 +42,12 @@ class HomePage extends StatelessWidget {
             Flexible(
               child: FlutterMap(
                 options: MapOptions(
-                  center: LatLng(51.5, -0.09),
-                  zoom: 5.0,
-                ),
+                    center: LatLng(51.5, -0.09), zoom: 5.0, onTap: _handleTap),
                 layers: [
                   TileLayerOptions(
                     urlTemplate:
                         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                     subdomains: ['a', 'b', 'c'],
-                    // For example purposes. It is recommended to use
-                    // TileProvider with a caching and retry strategy, like
-                    // NetworkTileProvider or CachedNetworkTileProvider
                     tileProvider: NonCachingNetworkTileProvider(),
                   ),
                   MarkerLayerOptions(markers: markers)
@@ -80,5 +58,11 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _handleTap(LatLng latlng) {
+    setState(() {
+      tappedPoints.add(latlng);
+    });
   }
 }
