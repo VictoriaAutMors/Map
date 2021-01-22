@@ -11,21 +11,14 @@ This repository provides an example app for Android devices called Map App that 
     * [Command line Git](#gitcl)
   * [Configuring a Remote for a Fork](#remote)
 * [Requirements](#req)
-* [Usage](#usage)
 * [Run the example](#run)
 * [Menu](#menu)
 * [Map tiles](#maptiles)
 * [Settings UI](#settingsui)
-  * [Basic usage](#basic)
-  * [Dark mode](#dark)
-    * [Example](#darkexample)
 * [Plugins](#plugins)
   * [flutter_map_marker_cluster](#p1)
-  * [user_location](#p2)
   * [flutter_map_tappable_polyline](#p3)
   * [lat_lon_grid_plugin](#p4)
-  * [flutter_map_marker_popup](#p5)
-  * [map_elevation](#p6)
 * [Dependencies](#dep)
 
 ## Development instruction <a name="devinst"></a>
@@ -68,49 +61,6 @@ If there are changes made in the Original repository, you can sync the fork to k
 
 ## Requirements <a name="req"></a>
 * [Android Studio](https://developer.android.com/studio)
-
-## Usage <a name="usage"></a>
-
-Configure the map using `MapOptions` and layer options:
-
-```dart
-Widget build(BuildContext context) {
-  return new FlutterMap(
-    options: new MapOptions(
-      center: new LatLng(51.5, -0.09),
-      zoom: 13.0,
-    ),
-    layers: [
-      new TileLayerOptions(
-        urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        subdomains: ['a', 'b', 'c']
-      ),
-      new MarkerLayerOptions(
-        markers: [
-          new Marker(
-            width: 80.0,
-            height: 80.0,
-            point: new LatLng(51.5, -0.09),
-            builder: (ctx) =>
-            new Container(
-              child: new FlutterLogo(),
-            ),
-          ),
-        ],
-      ),
-    ],
-  );
-}
-```
-
-Alternatively initialize the map by specifying bounds instead of center and zoom.
-
-```dart
-MapOptions(
-  bounds: LatLngBounds(LatLng(58.8, 6.1), LatLng(59, 6.2)),
-  boundsOptions: FitBoundsOptions(padding: EdgeInsets.all(8.0)),
-),
-```
 
 ## Run the example <a name="run"></a>
 
@@ -156,73 +106,6 @@ For Android, this plugin currently supports
 
 ![settings](images/settings.jpg)
 
-### Basic Usage: <a name="basic"></a>
-```
-SettingsList(
-        sections: [
-          SettingsSection(
-            title: 'Section',
-            tiles: [
-              SettingsTile(
-                title: 'Language',
-                subtitle: 'English',
-                leading: Icon(Icons.language),
-                onPressed: (BuildContext context) {},
-              ),
-              SettingsTile.switchTile(
-                title: 'Use fingerprint',
-                leading: Icon(Icons.fingerprint),
-                switchValue: value,
-                onToggle: (bool value) {},
-              ),
-            ],
-          ),
-        ],
-      )
-```
-
-### Settings UI supports dark mode (in progress) <a name="dark"></a>
-
-#### Example <a name="darkexample"></a>
-```
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-
-import 'screens/settings_screen.dart';
-
-void main() {
-  runApp(
-    DevicePreview(
-      enabled: kIsWeb ? false : !kReleaseMode,
-      builder: (_) => MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: DevicePreview.of(context).locale,
-      builder: DevicePreview.appBuilder,
-      debugShowCheckedModeBanner: false,
-      title: 'Settings UI Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-        brightness: Brightness.light,
-      ),
-      darkTheme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        accentColor: Colors.deepPurple,
-        brightness: Brightness.dark,
-      ),
-      home: SettingsScreen(),
-    );
-  }
-}
-```
-
 ## Plugins <a name="plugins"></a>
 
 #### [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): <a name="p1"></a>
@@ -231,8 +114,6 @@ Provides Beautiful Animated Marker Clustering functionality
 A plugin to add `onTap` callback to `Polyline`
 #### [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): <a name="p4"></a>
 Adds a latitude / longitude grid as plugin to the FlutterMap
-#### [map_elevation](https://github.com/OwnWeb/map_elevation): <a name="p6"></a>
-A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
 ## Dependencies: <a name="dep"></a>
 
