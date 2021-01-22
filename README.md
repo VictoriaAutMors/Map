@@ -227,14 +227,10 @@ class MyApp extends StatelessWidget {
 
 #### [flutter_map_marker_cluster](https://github.com/lpongetti/flutter_map_marker_cluster): <a name="p1"></a>
 Provides Beautiful Animated Marker Clustering functionality 
-#### [user_location](https://github.com/igaurab/user_location_plugin): <a name="p2"></a>
-A plugin to handle and plot the current user location in FlutterMap
 #### [flutter_map_tappable_polyline](https://github.com/OwnWeb/flutter_map_tappable_polyline):  <a name="p3"></a>
 A plugin to add `onTap` callback to `Polyline`
 #### [lat_lon_grid_plugin](https://github.com/mat8854/lat_lon_grid_plugin): <a name="p4"></a>
 Adds a latitude / longitude grid as plugin to the FlutterMap
-#### [flutter_map_marker_popup](https://github.com/rorystephenson/flutter_map_marker_popup): <a name="p5"></a>
-A plugin to show customisable popups for markers.
 #### [map_elevation](https://github.com/OwnWeb/map_elevation): <a name="p6"></a>
 A widget to display elevation of a track (polyline) like Leaflet.Elevation
 
